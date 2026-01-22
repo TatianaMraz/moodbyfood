@@ -7,6 +7,12 @@ const routes: Routes = [
     loadChildren: () =>
       import('./core/pages/home/home-module')
         .then(m => m.HomeModule)
+  },
+  {
+    path: 'ingredients/new',
+    loadChildren: () =>
+      import('./core/pages/add-ingredient/add-ingredient-module')
+        .then(m => m.AddIngredientModule)
   }
 ];
 

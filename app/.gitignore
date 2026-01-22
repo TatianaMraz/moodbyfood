@@ -1,0 +1,11 @@
+# Node / Angular
+**/node_modules/
+**/dist/
+**/.angular/
+**/.cache/
+**/*.log
+
+# OS / IDE
+.DS_Store
+.vscode/
+.idea/
