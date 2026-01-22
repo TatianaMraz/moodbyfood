@@ -1,10 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Header } from './layout/header/header';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    Header
+  ],
+  exports: [
+    Header,
+  ],
   imports: [
     CommonModule
   ],
