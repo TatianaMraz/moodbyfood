@@ -1,6 +1,6 @@
 <div class="container-xxl">
     <main class="d-flex justify-content-center">
-        <form class="col-8">
+        <form class="col-8" [formGroup]="form" (ngSubmit)="submit()">
             <h1>Nová surovina</h1>
 
             <div class="row row-cols-1 g-4">
@@ -11,6 +11,7 @@
                             id="name"
                             class="custom-input"
                             placeholder=" "
+                            formControlName="name_cs"
                         />
                         <label for="name">Názov</label>
                     </div>
@@ -55,8 +56,9 @@
                             value="0"
                             class="custom-input number-input"
                             placeholder=" "
+                            formControlName="protein_g"
                         />
-                        <label>Množstvo</label>
+                        <label>Množství</label>
                     </div>
 
                     <span class="macro-unit">g</span>
@@ -73,6 +75,7 @@
                             value="0"
                             class="custom-input number-input"
                             placeholder=" "
+                            formControlName="fat_g"
                         />
                         <label>Množství</label>
                     </div>
@@ -91,6 +94,7 @@
                             value="0"
                             class="custom-input number-input"
                             placeholder=" "
+                            formControlName="sugar_g"
                         />
                         <label>Množství</label>
                     </div>
@@ -109,6 +113,7 @@
                             value="0"
                             class="custom-input number-input"
                             placeholder=" "
+                            formControlName="energy_kcal"
                         />
                         <label>Množství</label>
                     </div>
@@ -306,6 +311,7 @@
 
                 <div class="col text-center">
                     <button type="submit" class="btn btn-primary">Uložit</button>
+                    <div *ngIf="errorMsg" class="text-danger mt-2">{{ errorMsg }}</div>
                 </div>
             </div>
         </form>
